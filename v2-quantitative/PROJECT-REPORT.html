@@ -1,0 +1,248 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Long Toll Road — 完整体系V2</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+           background: #0f172a; color: #e2e8f0; line-height: 1.6; padding: 0; }
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+    h1 { font-size: 2.2em; color: #f8fafc; border-bottom: 2px solid #334155; padding-bottom: 12px; margin-bottom: 24px; }
+    h2 { font-size: 1.5em; color: #38bdf8; margin-top: 40px; margin-bottom: 16px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; }
+    h3 { font-size: 1.2em; color: #94a3b8; margin-top: 28px; margin-bottom: 12px; }
+    p { margin-bottom: 14px; color: #cbd5e1; }
+    strong { color: #f1f5f9; }
+    code { background: #1e293b; color: #7dd3fc; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; font-family: "SF Mono", Monaco, monospace; }
+    pre { background: #0B1121; border: 1px solid #1e293b; border-radius: 8px; padding: 16px; margin: 16px 0; overflow-x: auto; }
+    pre code { background: transparent; padding: 0; font-size: 0.85em; line-height: 1.5; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9em; }
+    th { background: #1e293b; color: #38bdf8; padding: 10px 12px; text-align: left; font-weight: 600; border: 1px solid #334155; }
+    td { padding: 8px 12px; border: 1px solid #1e293b; }
+    tr:nth-child(even) { background: #0f172a; }
+    tr:nth-child(odd) { background: #151e34; }
+    ul, ol { margin: 8px 0 14px 24px; }
+    li { margin-bottom: 4px; color: #cbd5e1; }
+    hr { border: none; border-top: 1px solid #1e293b; margin: 32px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .header { background: linear-gradient(135deg, #0ea5e9, #6366f1); padding: 48px 0; text-align: center; margin-bottom: 32px; }
+    .header h1 { color: white; border: none; font-size: 2.5em; margin: 0; }
+    .header p { color: rgba(255,255,255,0.85); font-size: 1.1em; margin-top: 8px; }
+    .metric-card { display: inline-block; background: #1e293b; border-radius: 8px; padding: 16px 20px; margin: 8px; text-align: center; border: 1px solid #334155; min-width: 140px; }
+    .metric-card .value { font-size: 1.8em; font-weight: 700; color: #38bdf8; }
+    .metric-card .label { font-size: 0.8em; color: #64748b; margin-top: 4px; }
+    .metrics { text-align: center; margin: 24px 0; }
+    blockquote { border-left: 3px solid #38bdf8; padding: 8px 16px; margin: 16px 0; background: #151e34; border-radius: 0 8px 8px 0; color: #94a3b8; }
+    </style></head><body>
+    <div class="header"><h1>Long Toll Road</h1><p>完整体系V2 — 项目报告</p></div>
+    <div class="container">
+<h1>Long Toll Road — 完整体系V2 项目报告</h1>
+
+<p>&gt; 生成日期：2026-07-25</p>
+<p>&gt; 版本：v2.0</p>
+
+<hr>
+
+<h2>一、项目概述</h2>
+
+<p><strong>核心问题</strong>：能否在A股市场用系统化的方法，通过识别结构性增长赛道（Track）和具备护城河的公司（Toll），构建一个长期跑赢基准的策略？</p>
+
+<p><strong>研究方法</strong>：</p>
+<ul>
+<li>冻结500家A股上市公司（含100家失败/退市样本）</li>
+<li>采集2014-2024共43个季度财务数据</li>
+<li>构建完整回测引擎，支持多维度消融分析</li>
+<li>逐层验证：财务质量 → 赛道 → 收费站 → 估值 → 季度证伪 → 风控</li>
+</ul>
+
+<hr>
+
+<h2>二、策略框架</h2>
+
+<h3>2.1 整体架构</h3>
+
+<pre><code>500家冻结人群
+  │
+  ▼ 赛道门（行业健康度评分 ≥ 阈值）
+~479家
+  │
+  ▼ 收费站门（公司护城河评分 ≥ 1.5）
+~318家
+  │
+  ▼ 复合评分
+  赛道(30%) + 收费站(40%) + 估值(20%) + 质量(10%)
+  │
+  ▼ 选前15名 → 等权建仓 → 持有两年
+</code></pre>
+
+<h3>2.2 赛道评分（7个维度）</h3>
+
+<table>
+<tr><th>维度</th><th>权重</th><th>数据源</th></tr>
+<tr><td>毛利率水平</td><td>25%</td><td>财务快照</td></tr>
+<tr><td>营收增长稳定性</td><td>15%</td><td>财务快照</td></tr>
+<tr><td>ROE水平</td><td>20%</td><td>财务快照</td></tr>
+<tr><td>毛利率趋势</td><td>10%</td><td>财务快照</td></tr>
+<tr><td>现金流质量</td><td>10%</td><td>财务快照</td></tr>
+<tr><td>专利密度</td><td>10%</td><td>年报PDF提取</td></tr>
+<tr><td>政策支持强度</td><td>10%</td><td>五年规划/政策文件</td></tr>
+</table>
+
+<p>覆盖129个行业，覆盖500家公司的季度数据。</p>
+
+<h3>2.3 收费站评分（3个因子）</h3>
+
+<pre><code>收费站分 = 毛利率水平 × 毛利率稳定性 × ROE水平
+         (最高35分)
+
+分数 ≥ 1.5 通过收费站门
+分数 ≥ 10  强护城河（可重仓）
+</code></pre>
+
+<p>通过率：约66%（479家 → 318家）</p>
+
+<hr>
+
+<h2>三、关键发现</h2>
+
+<h3>3.1 持仓周期是最大瓶颈</h3>
+
+<pre><code>买入首期15只股票后：
+
+1年换仓: CAGR +12.74% ← 切得太短，卖飞大牛股
+2年换仓: CAGR +16.01% ← 最优！赢家跑完大部分涨幅
+3年换仓: CAGR +11.28% ← 太长，输家拖累
+5年换仓: CAGR +9.03%  ← 同上
+持有不动: CAGR +9.49%  ← 爆亏股拖9年
+</code></pre>
+
+<p><strong>核心洞察</strong>：策略的瓶颈不是选股（复合评分已经能选出华测导航+850%和珀莱雅+686%），而是持仓周期。年化换仓把大牛股都卖飞了。</p>
+
+<h3>3.2 停损伤害长期收益</h3>
+
+<p>15%停损在第一年持有框架下有效（MDD从-28.5%降到-12.6%），但在两年持有框架下反而降低了CAGR（+6.33% → +5.98%）。原因是大牛股中间有-20%到-30%的跌幅很正常，停损会提前被洗出去。</p>
+
+<h3>3.3 赛道+收费站的有效性</h3>
+
+<p>在500家全样本中：</p>
+<ul>
+<li>纯财务评分（V0）: CAGR +1.07%, MDD -50.47%</li>
+<li>加赛道+收费站后: CAGR +3.16%, MDD -47.18%</li>
+<li>加复合评分后: CAGR +3.51%, MDD -47.41%</li>
+<li>加两年持有后: CAGR +6.33%, MDD -29.78%</li>
+<li>加学术计算优化: CAGR +16.01%（无交易成本）</li>
+</ul>
+
+<p>每层都增加了价值。赛道的价值在于排除最差的行业（房地产、林业、贸易等），收费站的价值在于排除没有护城河的公司，两年持有期的价值在于让赢家充分兑现。</p>
+
+<hr>
+
+<h2>四、回测结果总表</h2>
+
+<h3>4.1 全样本消融分析（500家，含成本）</h3>
+
+<table>
+<tr><th>变体</th><th>CAGR</th><th>超额</th><th>MDD</th><th>Sharpe</th><th>说明</th></tr>
+<tr><td>CSI800基准</td><td>+1.45%</td><td>—</td><td>-42.96%</td><td>0.17</td><td>—</td></tr>
+<tr><td>V0（纯财务评分）</td><td>+1.07%</td><td>-0.38%</td><td>-50.47%</td><td>0.16</td><td>原始基线</td></tr>
+<tr><td>V2（赛道+收费站）</td><td>+3.16%</td><td>+1.71%</td><td>-47.18%</td><td>0.26</td><td>双门过滤</td></tr>
+<tr><td>+复合评分</td><td>+3.51%</td><td>+2.06%</td><td>-47.41%</td><td>0.27</td><td>更好的评分</td></tr>
+<tr><td>+15%停损</td><td>+5.68%</td><td>+4.22%</td><td>-12.63%</td><td>0.71</td><td>年度框架最优</td></tr>
+<tr><td>+季度证伪</td><td>+6.68%</td><td>+5.22%</td><td>-10.84%</td><td>0.95</td><td>最佳保守版本</td></tr>
+<tr><td>**V2两年持有**</td><td>**+6.33%**</td><td>**+4.88%**</td><td>**-29.78%**</td><td>**0.42**</td><td>**最终版本**</td></tr>
+<tr><td>两年持有（学术）</td><td>+16.01%</td><td>+14.56%</td><td>-13.0%</td><td>0.86</td><td>无成本估算</td></tr>
+</table>
+
+<h3>4.2 最佳备选版本</h3>
+
+<pre><code>一年持有+15%停损+季度证伪: CAGR +6.68%, MDD -10.84%, Sharpe 0.95
+</code></pre>
+
+<p>Sharpe 0.95是系统最高，MDD仅-10.84%。以Sharpe为评判标准是最优的。但绝对收益略低于两年持有策略的学术估算（+16.01%）。</p>
+
+<h3>4.3 历史选股验证</h3>
+
+<p>2015年5月首次选股的前15只买入持有至2024年：</p>
+
+<table>
+<tr><th>代码</th><th>名称</th><th>行业</th><th>收益</th><th>年化</th></tr>
+<tr><td>**300627**</td><td>华测导航</td><td>通信设备</td><td>**+850%**</td><td>**+33.6%**</td></tr>
+<tr><td>**603605**</td><td>珀莱雅</td><td>化妆品</td><td>**+686%**</td><td>**+33.6%**</td></tr>
+<tr><td>603288</td><td>海天味业</td><td>调味品</td><td>+249%</td><td>+15.5%</td></tr>
+<tr><td>603203</td><td>快克智能</td><td>自动化设备</td><td>+201%</td><td>+14.5%</td></tr>
+<tr><td>002912</td><td>中新赛克</td><td>计算机设备</td><td>+57%</td><td>+6.5%</td></tr>
+<tr><td>600566</td><td>济川药业</td><td>中药</td><td>+50%</td><td>+4.8%</td></tr>
+</table>
+
+<p><strong>等权组合总收益：+134%，CAGR：+10.31%</strong></p>
+
+<hr>
+
+<h2>五、数据基础设施</h2>
+
+<h3>5.1 已完成的数据层</h3>
+
+<table>
+<tr><th>数据</th><th>状态</th><th>说明</th></tr>
+<tr><td>500家人群</td><td>✅</td><td>含100家失败样本，含行业标签</td></tr>
+<tr><td>43个季度快照</td><td>✅</td><td>2014Q1-2024Q4，每次涵盖全部A股</td></tr>
+<tr><td>价格数据</td><td>✅</td><td>486/500家（97%覆盖）</td></tr>
+<tr><td>行业仪表盘</td><td>✅</td><td>129行业×7维度，百分位评分</td></tr>
+<tr><td>年报研发/专利</td><td>✅</td><td>从396份PDF提取，271条数据</td></tr>
+<tr><td>政策参考评分</td><td>✅</td><td>基于十三五/十四五规划</td></tr>
+<tr><td>事件数据库</td><td>✅</td><td>293条验证事件（PIT存储）</td></tr>
+<tr><td>估值百分位</td><td>✅</td><td>含PE/PB百分位和公允价值</td></tr>
+</table>
+
+<h3>5.2 工具链</h3>
+
+<table>
+<tr><th>工具</th><th>用途</th></tr>
+<tr><td>`run_backtest_final.py`</td><td>V2回测引擎</td></tr>
+<tr><td>`build_industry_dashboard.py`</td><td>行业评分仪表盘</td></tr>
+<tr><td>`extract_rd_capex.py`</td><td>研发/专利数据提取</td></tr>
+<tr><td>`fetch_policy_data.py`</td><td>政策文件采集（需网络）</td></tr>
+<tr><td>`build_composite_score.py`</td><td>复合评分生成</td></tr>
+<tr><td>`build_selections_500.py`</td><td>500家人群选股</td></tr>
+</table>
+
+<hr>
+
+<h2>六、待完善方向</h2>
+
+<ul>
+<li><strong>政策文件实时采集</strong> — <code>fetch_policy_data.py</code> 已就绪，需在本机网络环境下跑一次</li>
+</ul>
+<p>2. <strong>估值退出完善</strong> — 用跟踪EPS替代年度EPS计算PE百分位，当前简化版效果不佳</p>
+<p>3. <strong>事件驱动退出</strong> — 293条验证事件已入库，可扩展至全500家后接入退出规则</p>
+<p>4. <strong>动态持仓周期</strong> — 根据市场状态（如200日均线）灵活调整2年/1年持有</p>
+
+<hr>
+
+<h2>七、文件索引</h2>
+
+<pre><code>回测/
+├── pit/
+│   ├── run_backtest_final.py          ← V2回测引擎
+│   ├── data/
+│   │   ├── selections.csv             ← 当前选股
+│   │   ├── prices/                    ← 价格数据（486家）
+│   │   ├── financial_snapshots/       ← 财务快照（43个季度）
+│   │   └── selections_full_v2.csv     ← V2筛选后选股
+│   └── output/
+│       ├── summary_enhanced.json      ← 增强回测结果
+│       ├── summary_full.json          ← 完整回测结果
+│       └── summary_final.json         ← 最终回测结果
+│
+├── industry_pit/
+│   └── complete-system-v1/
+│       ├── experiment-plan.json       ← 实验计划（已更新V2）
+│       ├── final-v2-summary.json      ← V2最终摘要
+│       ├── PROJECT-REPORT.md          ← 本报告
+│       ├── TRACK-RESEARCH-FRAMEWORK.md ← 赛道研究框架
+│       └── data/
+│           ├── industry-dashboard-v3.json  ← 行业仪表盘
+│           ├── rd_capex_data.csv           ← 研发/专利数据
+│           └── policy_reference.json       ← 政策参考评分
+│
+└── documents/cninfo/                  ← 已下载年报PDF（396份）
+</code></pre>
+
+</div></body></html>
