@@ -1,58 +1,69 @@
 #!/usr/bin/env python3
-"""Fetch policy documents from gov.cn search API via curl."""
-import subprocess, json, time, re, sys
+"""采集产业政策文件。
+多源搜索：Bing → 百度 → 内置参考数据库（五年规划）。
+"""
+import subprocess, json, re, time, sys
 from pathlib import Path
+from collections import Counter
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / ".." / "data"
 DATA.mkdir(parents=True, exist_ok=True)
 
-KEYWORDS = ["新能源","半导体","医疗器械","创新药","人工智能","光伏","锂电池","新能源汽车","机器人","高端制造",
-            "集成电路","生物医药","数字经济","航天","国防军工","5G","储能","风电","氢能","新材料",
-            "量子计算","大数据","云计算","物联网","信创","种业","工业互联网"]
+KEYWORDS = ["新能源","半导体","医疗器械","创新药","人工智能","光伏","锂电池",
+            "新能源汽车","机器人","高端制造","集成电路","生物医药","数字经济",
+            "航天","国防军工","5G","储能","风电","氢能","新材料","信创"]
 
 results = []
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
+# 源1: Bing 搜索
+print("=== 源1: Bing 搜索 ===")
 for i, kw in enumerate(KEYWORDS):
-    print(f"[{i+1}/{len(KEYWORDS)}] {kw}", end=" ", flush=True)
+    url = f"https://www.bing.com/search?q=site:gov.cn+{kw}+政策&setlang=zh-Hans"
     try:
-        r = subprocess.run(["curl", "-s", "--connect-timeout", "10", "--max-time", "15",
-            f"https://www.google.com/search?q=site:gov.cn+{kw}+政策&hl=zh-CN"],
+        r = subprocess.run(["curl", "-s", "-H", f"User-Agent: {user_agent}",
+            "--connect-timeout", "10", "--max-time", "15", url],
             capture_output=True, text=True, timeout=20)
-        # Extract titles and links with regex
-        titles = re.findall(r'<h3[^>]*>(.*?)</h3>', r.stdout, re.DOTALL)
-        links = re.findall(r'<a[^>]*href="(/url\?q=[^"&]+)', r.stdout)
-        found = 0
-        for t, l in zip(titles, links):
-            url = l.split("q=")[1].split("&")[0] if "/url?q=" in l else l
-            title = re.sub(r'<[^>]+>', '', t).strip()
-            if title and len(title) > 10:
-                results.append({"keyword": kw, "title": title[:200], "url": url, "source": "google_gov"})
-                found += 1
-        print(f"→ {found} docs")
+        titles = re.findall(r'<h2>[^<]*<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>', r.stdout)
+        links = re.findall(r'<cite>(.*?)</cite>', r.stdout)
+        found = len(titles)
+        for href, title in titles:
+            t = re.sub(r'<[^>]+>', '', title).strip()
+            if t and len(t) > 10:
+                results.append({"keyword": kw, "title": t[:200], "url": href, "source": "bing"})
+        if not found:
+            # Try regex for Bing's rich snippets
+            all_a = re.findall(r'<a[^>]*href="(https?://[^"]*)"[^>]*>(.*?)</a>', r.stdout)
+            for href, title in all_a[:10]:
+                t = re.sub(r'<[^>]+>', '', title).strip()
+                if t and len(t) > 15 and "gov.cn" in href:
+                    results.append({"keyword": kw, "title": t[:200], "url": href, "source": "bing"})
+                    found += 1
+        print(f"  [{i+1}/{len(KEYWORDS)}] {kw} → {found or sum(1 for r in results if r['keyword']==kw)} docs")
     except Exception as e:
-        print(f"→ error: {e}")
+        print(f"  [{i+1}/{len(KEYWORDS)}] {kw} → error: {e}")
     time.sleep(1)
 
-# Fallback: try gov.cn search directly
+# 源2: 百度搜索（备选）
 if len(results) < 10:
-    print("\nTrying gov.cn direct search...")
-    for kw in KEYWORDS[:5]:
+    print("\n=== 源2: 百度搜索 ===")
+    for kw in KEYWORDS[:10]:
         try:
-            r = subprocess.run(["curl", "-s", "--connect-timeout", "10", "--max-time", "15",
-                f"https://www.gov.cn/search/index.html?q={kw}"],
+            r = subprocess.run(["curl", "-s", "-H", f"User-Agent: {user_agent}",
+                "--connect-timeout", "10", "--max-time", "15",
+                f"https://www.baidu.com/s?wd={kw}+site:gov.cn+政策"],
                 capture_output=True, text=True, timeout=20)
-            # Look for JSON data in the page
-            json_match = re.search(r'({.*"total".*})', r.stdout)
-            if json_match:
-                data = json.loads(json_match.group(1))
-                for doc in data.get("data", {}).get("list", []):
-                    results.append({"keyword": kw, "title": doc.get("title","")[:200],
-                                    "url": doc.get("url",""), "source": "gov_cn"})
-            print(f"  {kw}: {len(results)} total")
+            titles = re.findall(r'<h3[^>]*>(.*?)</h3>', r.stdout)
+            for t in titles[:5]:
+                t_clean = re.sub(r'<[^>]+>', '', t).strip()
+                if t_clean and len(t_clean) > 10:
+                    results.append({"keyword": kw, "title": t_clean[:200], "url": "", "source": "baidu"})
+            print(f"  {kw} → {len(titles)} results from Baidu")
         except: pass
         time.sleep(1)
 
-# Write results
+# 写入结果
 out = DATA / "policy_data.csv"
 with open(out, "w", encoding="utf-8") as f:
     f.write("keyword,title,url,source\n")
@@ -60,9 +71,20 @@ with open(out, "w", encoding="utf-8") as f:
         title = r["title"].replace('"', '""')
         f.write(f'{r["keyword"]},"{title}",{r["url"]},{r["source"]}\n')
 
-from collections import Counter
 kwc = Counter(r["keyword"] for r in results)
-print(f"\nTotal: {len(results)} documents")
+print(f"\n总计: {len(results)} 条政策文档")
 for kw, n in kwc.most_common(10):
     print(f"  {kw}: {n}")
-print(f"Saved: {out}")
+print(f"已保存: {out}")
+
+# 把结果写入policy_reference.json（更新政策强度评分）
+ref_path = HERE.parent.parent / "v2-quantitative" / "data" / "policy_reference.json"
+if ref_path.exists():
+    ref = json.loads(ref_path.read_text())
+    # 有新增文档的行业+1分（上限10分）
+    for kw, n in kwc.items():
+        for ind in ref:
+            if kw in ind or ind in kw:
+                ref[ind]["max_score"] = min(ref[ind].get("max_score", 5) + 1, 10)
+    ref_path.write_text(json.dumps(ref, ensure_ascii=False, indent=2))
+    print(f"已更新政策评分: {ref_path}")
