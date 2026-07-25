@@ -1,0 +1,68 @@
+{
+  "version": "complete-risk-v1",
+  "frozen_before_return_test": true,
+  "signal_execution": "公告或收盘后确认，下一可交易日开盘执行；停牌或一字跌停延迟",
+  "quarterly_updates": {
+    "calendar": ["04-30", "08-31", "10-31"],
+    "use_actual_announcement_when_available": true,
+    "fallback_deadline_is_conservative": true,
+    "facts": [
+      "revenue_yoy",
+      "profit_yoy",
+      "gross_margin",
+      "ocf_ttm",
+      "net_profit_ttm",
+      "debt_ratio",
+      "contract_liability_yoy"
+    ]
+  },
+  "fundamental_invalidation": {
+    "hard_exit": [
+      "confirmed_financial_fraud",
+      "adverse_or_disclaimer_audit",
+      "core_business_ceased",
+      "signal_date_ST_or_delisting_period"
+    ],
+    "quarterly_exit": [
+      "revenue_yoy<0 and profit_yoy<0 for two consecutive disclosed quarters",
+      "ocf_ttm<0 while net_profit_ttm>0 for two consecutive disclosed quarters",
+      "gross_margin_yoy_drop_pp>=5",
+      "debt_ratio>=75% and debt_ratio_yoy_increase_pp>=10"
+    ],
+    "warning_only": [
+      "contract_liability_yoy < revenue_yoy-20pp",
+      "single_customer_share>50%"
+    ],
+    "reentry": "next scheduled annual selection only, after all invalidation states clear"
+  },
+  "valuation_exit": {
+    "base": "pe_percentile_5y>=80% or price>=1.2*fair_value",
+    "neighbors": ["pe_percentile>=75%", "pe_percentile>=90%"],
+    "negative_eps": "valuation exit unavailable; fundamental rules remain active"
+  },
+  "portfolio_constraints": {
+    "single_name_target_cap": 0.10,
+    "industry_target_cap": 0.20,
+    "cash_allowed": true,
+    "no_leverage": true,
+    "minimum_positions_for_full_exposure": 8
+  },
+  "portfolio_risk_ablation": {
+    "volatility_target": {
+      "benchmark": "CSI800",
+      "lookback_days": 60,
+      "annualized_target": 0.15,
+      "exposure_floor": 0.30,
+      "exposure_ceiling": 1.0,
+      "rebalance_tolerance": 0.10,
+      "execution": "next_tradable_open"
+    },
+    "drawdown_cap": {
+      "trigger_from_prior_close_nav": 0.12,
+      "exposure_after_trigger": 0.50,
+      "recovery": "drawdown<=0.06 and next scheduled weekly review",
+      "execution": "next_tradable_open"
+    },
+    "testing_rule": "volatility_target and drawdown_cap are separate Stage-B variants; do not combine unless each passes its defensive gate"
+  }
+}

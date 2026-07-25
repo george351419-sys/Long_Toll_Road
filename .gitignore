@@ -1,0 +1,36 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv*
+*.egg-info/
+dist/
+build/
+
+# === Data (too large for git) ===
+# Shared financial data - regenerate from source
+shared/data/financial_snapshots/
+shared/data/prices/
+shared/data/documents/
+
+# === Old structure (already migrated to v2/v3) ===
+回测/
+系统/
+价格跟踪/
+季度复盘/
+每日扫描/
+观察池/
+调研资料/
+财务数据/
+tests/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo

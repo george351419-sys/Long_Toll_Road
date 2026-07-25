@@ -1,0 +1,776 @@
+{
+  "IT服务Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "一般零售": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "专业工程": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "专业服务": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "专业连锁Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "专用设备": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "个护用品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "中药Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "乘用车": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 0,
+    "max_score": 7,
+    "avg_score": 3.5
+  },
+  "互联网电商": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "休闲食品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "体育Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "保险Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "元件": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "光伏设备": {
+    "score_2016_2020": 8,
+    "score_2021_2025": 9,
+    "max_score": 9,
+    "avg_score": 8.5
+  },
+  "光学光电子": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "其他家电Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "其他电子Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "其他电源设备Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "养殖业": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "军工电子Ⅱ": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 7.5
+  },
+  "农业综合Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "农产品加工": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "农化制品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "冶钢原料": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "出版": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "动物保健Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "包装印刷": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "化妆品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "化学制品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "化学制药": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 0,
+    "max_score": 7,
+    "avg_score": 3.5
+  },
+  "化学原料": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "化学纤维": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "医疗器械": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 7.5
+  },
+  "医疗服务": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 7.5
+  },
+  "医疗美容": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "医药商业": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "半导体": {
+    "score_2016_2020": 8,
+    "score_2021_2025": 9,
+    "max_score": 9,
+    "avg_score": 8.5
+  },
+  "厨卫电器": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "商用车": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "地面兵装Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "基础建设": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "塑料": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "多元金融": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "家居用品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "家电零部件Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "小家电": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "小金属": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "工业金属": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "工程咨询服务Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "工程机械": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "广告营销": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "影视院线": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "房地产开发": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "房地产服务": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "房屋建设Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "摩托车及其他": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "教育": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "数字媒体": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "文娱用品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "旅游及景区": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "旅游零售Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "普钢": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "服装家纺": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "未知": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "林业Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "橡胶": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "水泥": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "汽车服务": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "汽车零部件": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "油服工程": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "油气开采Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "消费电子": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "渔业": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "游戏Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "炼化及贸易": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "焦炭Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "煤炭开采": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "照明设备Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "燃气Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "物流": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "特钢Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "环保设备Ⅱ": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 0,
+    "max_score": 7,
+    "avg_score": 3.5
+  },
+  "环境治理": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "玻璃玻纤": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "生物制品": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 7.5
+  },
+  "电力": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "电子化学品Ⅱ": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 0,
+    "max_score": 7,
+    "avg_score": 3.5
+  },
+  "电机Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "电池": {
+    "score_2016_2020": 8,
+    "score_2021_2025": 9,
+    "max_score": 9,
+    "avg_score": 8.5
+  },
+  "电网设备": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "电视广播Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "白色家电": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "白酒Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "种植业": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "纺织制造": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "综合Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "能源金属": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 9,
+    "max_score": 9,
+    "avg_score": 8.0
+  },
+  "自动化设备": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 0,
+    "max_score": 7,
+    "avg_score": 3.5
+  },
+  "航天装备Ⅱ": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 7.5
+  },
+  "航海装备Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "航空机场": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "航空装备Ⅱ": {
+    "score_2016_2020": 7,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 7.5
+  },
+  "航运港口": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "装修建材": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "装修装饰Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "计算机设备": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "证券Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "调味发酵品Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 8,
+    "max_score": 8,
+    "avg_score": 4.0
+  },
+  "贵金属": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "贸易Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "轨交设备Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "软件开发": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "通信服务": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "通信设备": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "通用设备": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "造纸": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "酒店餐饮": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "金属新材料": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "铁路公路": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "银行Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "非白酒": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "非金属材料Ⅱ": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "风电设备": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "食品加工": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "饮料乳品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "饰品": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "饲料": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  },
+  "黑色家电": {
+    "score_2016_2020": 0,
+    "score_2021_2025": 0,
+    "max_score": 0,
+    "avg_score": 0.0
+  }
+}

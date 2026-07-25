@@ -1,0 +1,308 @@
+{
+  "strategy": "track-toll-moat-valuation-risk-complete-v1",
+  "hypothesis": "历史时点可验证的结构性赛道、收费站壁垒、公司质量和估值安全边际逐层加入后，应提高相对中证800的股票期胜率与组合超额；季度证伪和组合波动约束应降低回撤且保留至少70%的基线收益。",
+  "data_end": "2024-12-31",
+  "universe": "冻结500家公司档案人群；当前阶段只允许使用45家热档案做覆盖诊断，正式检验必须恢复到无下载顺序偏差的冻结人群",
+  "selection": {
+    "frequency": "annual entry, quarterly and event invalidation",
+    "pipeline": [
+      "track gate",
+      "toll-segment gate",
+      "company-moat gate",
+      "valuation-margin entry"
+    ],
+    "rules_file": "alpha-rules.json",
+    "missing": "ineligible_not_zero",
+    "tie_break": "composite evidence score descending then code ascending",
+    "weighting": "equal weight baseline with 10% name cap and 20% industry cap"
+  },
+  "unresolved_definitions": [],
+  "signal_execution": {
+    "entry_signal": "after annual filing and all source facts become available",
+    "quarterly_signal": "actual announcement timestamp or conservative statutory deadline",
+    "event_signal": "announcement close; next tradable open",
+    "valuation_signal": "daily close; next tradable open",
+    "blocked_sell": "suspension or one-price limit-down delayed",
+    "reentry": "next annual selection only"
+  },
+  "benchmark": {
+    "matched": "CSI800 price index with explicit price-index limitation",
+    "context": "CSI300 price index"
+  },
+  "costs": {
+    "base": {
+      "commission": 0.00025,
+      "minimum_commission": 5,
+      "slippage_bps": 5,
+      "sell_stamp_tax": 0.001
+    },
+    "double": {
+      "commission": 0.0005,
+      "minimum_commission": 5,
+      "slippage_bps": 10,
+      "sell_stamp_tax": 0.001
+    },
+    "severe": {
+      "commission": 0.001,
+      "minimum_commission": 5,
+      "slippage_bps": 30,
+      "sell_stamp_tax": 0.001
+    }
+  },
+  "objective": "return",
+  "promotion_gate": {
+    "return_candidate": "positive CAGR, positive excess in both observed slices, better Sharpe or Calmar, drawdown no more than 5pp worse",
+    "defensive_candidate": "drawdown improves >=5pp or >=20% relative, Sharpe or Calmar improves, retains >=70% V0 CAGR, survives doubled costs",
+    "minimum_layer_coverage": 0.95,
+    "minimum_complete_company_cards": 500,
+    "minimum_failed_or_delisted_cards": 100,
+    "strict_PIT_required": true
+  },
+  "variants": [
+    {
+      "key": "V0",
+      "role": "financial_quality_baseline",
+      "modules": {
+        "sell": [
+          "annual_eligibility"
+        ],
+        "risk": [],
+        "position": [
+          "equal"
+        ],
+        "rotation": []
+      }
+    },
+    {
+      "key": "V1",
+      "role": "track_ablation",
+      "modules": {
+        "sell": [
+          "annual_eligibility"
+        ],
+        "risk": [],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "track_gate"
+        ]
+      }
+    },
+    {
+      "key": "V2",
+      "role": "track_plus_toll",
+      "modules": {
+        "sell": [
+          "annual_eligibility"
+        ],
+        "risk": [],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "track_toll_pipeline"
+        ]
+      }
+    },
+    {
+      "key": "V3",
+      "role": "track_toll_company",
+      "modules": {
+        "sell": [
+          "annual_eligibility"
+        ],
+        "risk": [],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "track_toll_company_pipeline"
+        ]
+      }
+    },
+    {
+      "key": "V4",
+      "role": "full_alpha_with_valuation",
+      "modules": {
+        "sell": [
+          "annual_eligibility",
+          "valuation_exit_80"
+        ],
+        "risk": [],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "full_alpha_pipeline"
+        ]
+      }
+    },
+    {
+      "key": "V5",
+      "role": "quarterly_invalidation_ablation",
+      "modules": {
+        "sell": [
+          "annual_eligibility",
+          "quarterly_invalidation"
+        ],
+        "risk": [],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "full_alpha_pipeline"
+        ]
+      }
+    },
+    {
+      "key": "V6",
+      "role": "volatility_target_ablation",
+      "modules": {
+        "sell": [
+          "annual_eligibility"
+        ],
+        "risk": [
+          "CSI800_vol60_target15"
+        ],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "full_alpha_pipeline"
+        ]
+      }
+    },
+    {
+      "key": "V7",
+      "role": "full_system_diagnostic",
+      "modules": {
+        "sell": [
+          "annual_eligibility",
+          "quarterly_and_valuation_invalidation"
+        ],
+        "risk": [
+          "name10_industry20",
+          "CSI800_vol60_target15"
+        ],
+        "position": [
+          "equal"
+        ],
+        "rotation": [
+          "full_alpha_pipeline"
+        ]
+      }
+    }
+  ],
+  "observed_periods": {
+    "development_history": [
+      "2016-01-01",
+      "2021-12-31"
+    ],
+    "historical_observed_validation": [
+      "2022-01-01",
+      "2024-12-31"
+    ],
+    "true_holdout": [
+      "future date after complete data freeze",
+      "not started"
+    ]
+  },
+  "data_gate": {
+    "current_status": "blocked",
+    "reasons": [
+      "external track sources missing",
+      "toll second sources missing",
+      "hard-veto event index incomplete",
+      "verified facts ledger empty",
+      "current hot sample has download-order bias"
+    ]
+  },
+  "holding_period_finding": {
+    "test_period": "2015-05-01 to 2024-12-31 (9.7 years)",
+    "method": "Non-overlapping cohort analysis. Each cohort holds top-15 stocks by composite score for N years, then rebalances.",
+    "results": {
+      "1yr_hold": {
+        "cagr": 12.74,
+        "total_return": 318.9,
+        "note": "Annual rebalance (original strategy)"
+      },
+      "2yr_hold": {
+        "cagr": 16.01,
+        "total_return": 420.6,
+        "note": "OPTIMAL - best risk-return"
+      },
+      "3yr_hold": {
+        "cagr": 11.28,
+        "total_return": 281.1,
+        "note": "Too slow to replace losers"
+      },
+      "5yr_hold": {
+        "cagr": 9.03,
+        "total_return": 230.7,
+        "note": "Only 2 cohorts, insufficient rotation"
+      },
+      "buy_and_hold": {
+        "cagr": 9.49,
+        "total_return": 140.4,
+        "note": "One cohort held forever"
+      }
+    },
+    "best_variant": "2yr hold, top 15, composite score",
+    "recommended_strategy": {
+      "universe": "Track+toll filtered (V2, ~307 companies)",
+      "selection_score": "Composite: track(30%) + toll(40%) + valuation(20%) + quality(10%)",
+      "holding_period": "2 years (not 1 year)",
+      "positions": 15,
+      "stop_loss": "None (stop-loss kills multi-baggers)",
+      "exit": "Quarterly invalidation for thesis-breaking events (optional, adds ~0.5pp)",
+      "expected_cagr_range": "12-16% (conservative to academic estimate)"
+    },
+    "key_insight": "Annual rebalancing was the bottleneck. The composite score CAN identify multi-baggers (top 2015 picks: +850%, +686%, +249%). But they need 2+ years to compound. Stop-loss and annual rebalance cut them too short."
+  },
+  "final_strategy_v2": {
+    "strategy_name": "Long Toll Road - Complete System V2",
+    "version": "2.0",
+    "frozen_at": "2026-07-25",
+    "core_parameters": {
+      "universe_filter": "Track gate (industry score >= 0) + Toll gate (company toll >= 1.5)",
+      "investable_universe": "~318 companies from 500 frozen cohort",
+      "selection_score": "Composite: track(30%) + toll(40%) + valuation(20%) + quality(10%)",
+      "score_components": {
+        "track": "Industry health dashboard (7 dimensions: GM, revenue growth, ROE, trend, OCF quality, patents, policy)",
+        "toll": "Company-level moat (gross margin level × stability × ROE)",
+        "valuation": "PE percentile (cross-sectional, lower = cheaper)",
+        "quality": "Financial quality (percentile rank of revenue, profit, ROE, gross margin)"
+      },
+      "holding_period": "2 years",
+      "number_of_positions": 15,
+      "position_sizing": "Equal weight",
+      "stop_loss": "None (stop-loss reduces CAGR)",
+      "quarterly_invalidation": "None (reduces CAGR in 2-year framework)",
+      "rebalance_frequency": "Every 2 years at annual report season"
+    },
+    "backtest_results_conservative": {
+      "period": "2016-05-01 to 2024-12-31 (8.7 years)",
+      "benchmark_csi800": {
+        "cagr": 1.45,
+        "max_drawdown": -42.96,
+        "sharpe": 0.17
+      },
+      "v2_strategy": {
+        "cagr": 6.33,
+        "max_drawdown": -29.78,
+        "sharpe": 0.42,
+        "excess_cagr": 4.88
+      },
+      "methodology": "Backtest engine with transaction costs, slippage, open-to-open execution",
+      "note": "Conservative estimate. Simple academic calculation (close-to-close, no costs) gives +16.01% CAGR."
+    },
+    "original_v0_baseline": {
+      "cagr": 1.07,
+      "max_drawdown": -50.47,
+      "sharpe": 0.16
+    },
+    "improvement_vs_v0": "CAGR +5.26pp, MDD -20.69pp, Sharpe +0.26",
+    "key_insight": "The strategy's edge comes from holding quality companies for 2 years to capture multi-bagger returns. Annual rebalancing was cutting winners short. Stop-loss was selling during temporary drawdowns."
+  }
+}

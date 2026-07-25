@@ -1,0 +1,40 @@
+{
+  "version": "complete-system-data-v1",
+  "layers": {
+    "track": {
+      "frequency": "annual_or_event",
+      "minimum_sources": 2,
+      "required_source_classes": ["government_or_association", "independent_primary"],
+      "current_status": "missing_external_primary_history"
+    },
+    "toll_segment": {
+      "frequency": "annual_or_event",
+      "minimum_sources": 2,
+      "required_source_classes": ["company_filing", "customer_government_association_or_patent_primary"],
+      "current_status": "annual_report_candidates_available_second_source_missing"
+    },
+    "company_moat": {
+      "frequency": "quarterly_and_annual",
+      "required_source_classes": ["company_filing"],
+      "current_status": "annual_candidates_available_quarterly_vendor_values_unverified"
+    },
+    "valuation": {
+      "frequency": "daily",
+      "required": ["raw_or_reversible_price", "PIT_EPS", "PIT_BPS", "PIT_industry", "five_year_valuation_history"],
+      "current_status": "blocked_adjustment_factor_and_strict_PIT_valuation_missing"
+    },
+    "risk_events": {
+      "frequency": "event_and_quarterly",
+      "required": ["announcement_timestamp", "event_type", "original_document", "next_tradable_session"],
+      "current_status": "quarterly_candidate_stream_buildable_event_documents_incomplete"
+    }
+  },
+  "statuses": ["missing", "candidate_only_not_verified", "verified", "superseded", "retracted"],
+  "prohibitions": [
+    "no missing value imputation",
+    "no current industry classification backfill",
+    "no revised value before its revision timestamp",
+    "no self-authored fair value without frozen PIT inputs",
+    "no keyword hit promoted directly to verified fact"
+  ]
+}

@@ -1,0 +1,1390 @@
+{
+  "generated_at": "2026-07-24 (v2 with R&D+Policy integration)",
+  "total_industries": 126,
+  "data_years": "2014-2024",
+  "source": "financial snapshots (BaoStock vendor data)",
+  "scoring_method": "Composite of gross margin(30%), revenue stability(20%), profit growth(10%), ROE(30%), earnings quality(10%)",
+  "warning": "Scores are based on aggregate financial data from cohort companies. Industries with <3 companies may have inflated scores.",
+  "top_5_industries": [
+    {
+      "industry": "中药Ⅱ",
+      "score": 10,
+      "gm": 68.5,
+      "rev": 10.7,
+      "roe": 8.9,
+      "companies": 3,
+      "trend": "declining"
+    },
+    {
+      "industry": "休闲食品",
+      "score": 10,
+      "gm": 46.1,
+      "rev": 12.9,
+      "roe": 15.0,
+      "companies": 3,
+      "trend": "declining"
+    },
+    {
+      "industry": "化妆品",
+      "score": 10,
+      "gm": 63.9,
+      "rev": 19.6,
+      "roe": 13.2,
+      "companies": 3,
+      "trend": "improving"
+    },
+    {
+      "industry": "未知",
+      "score": 10,
+      "gm": 35.0,
+      "rev": 30.1,
+      "roe": 13.0,
+      "companies": 3,
+      "trend": "improving"
+    },
+    {
+      "industry": "调味发酵品Ⅱ",
+      "score": 9.98,
+      "gm": 37.4,
+      "rev": 10.2,
+      "roe": 9.8,
+      "companies": 3,
+      "trend": "improving"
+    }
+  ],
+  "bottom_5_industries": [
+    {
+      "industry": "炼化及贸易",
+      "score": 1.1,
+      "gm": 7.6,
+      "rev": 4.2,
+      "roe": 1.9,
+      "companies": 4,
+      "trend": "improving"
+    },
+    {
+      "industry": "电力",
+      "score": 1.09,
+      "gm": 24.0,
+      "rev": -0.3,
+      "roe": 1.4,
+      "companies": 6,
+      "trend": "declining"
+    },
+    {
+      "industry": "光学光电子",
+      "score": 0.76,
+      "gm": 19.7,
+      "rev": 3.2,
+      "roe": 1.1,
+      "companies": 8,
+      "trend": "declining"
+    },
+    {
+      "industry": "商用车",
+      "score": 0.06,
+      "gm": 11.6,
+      "rev": -0.2,
+      "roe": 1.8,
+      "companies": 3,
+      "trend": "declining"
+    },
+    {
+      "industry": "焦炭Ⅱ",
+      "score": -0.04,
+      "gm": 8.6,
+      "rev": -1.2,
+      "roe": 0.4,
+      "companies": 3,
+      "trend": "declining"
+    }
+  ],
+  "all_industries": {
+    "IT服务Ⅱ": {
+      "existing_score": 4.9,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.95,
+      "policy_period": "0|0"
+    },
+    "一般零售": {
+      "existing_score": 2.05,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.66,
+      "policy_period": "0|0"
+    },
+    "专业工程": {
+      "existing_score": 5.36,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.31,
+      "policy_period": "0|0"
+    },
+    "专业服务": {
+      "existing_score": 9.45,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 7.58,
+      "policy_period": "0|0"
+    },
+    "专业连锁Ⅱ": {
+      "existing_score": 5.92,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.76,
+      "policy_period": "0|0"
+    },
+    "专用设备": {
+      "existing_score": 1.69,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.38,
+      "policy_period": "0|0"
+    },
+    "个护用品": {
+      "existing_score": 5.8,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.67,
+      "policy_period": "0|0"
+    },
+    "中药Ⅱ": {
+      "existing_score": 10,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 8.03,
+      "policy_period": "0|0"
+    },
+    "乘用车": {
+      "existing_score": 5.32,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.7,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.28,
+      "policy_period": "7|0"
+    },
+    "互联网电商": {
+      "existing_score": 2.65,
+      "patent_score": 3.9,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 7,
+      "rd_rows": 0,
+      "composite_v2": 2.18,
+      "policy_period": "0|0"
+    },
+    "休闲食品": {
+      "existing_score": 10,
+      "patent_score": 0.4,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 11,
+      "rd_rows": 0,
+      "composite_v2": 8.03,
+      "policy_period": "0|8"
+    },
+    "体育Ⅱ": {
+      "existing_score": 2.74,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.22,
+      "policy_period": "0|0"
+    },
+    "元件": {
+      "existing_score": 6.69,
+      "patent_score": 3.6,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 9,
+      "rd_rows": 0,
+      "composite_v2": 5.41,
+      "policy_period": "0|0"
+    },
+    "光伏设备": {
+      "existing_score": 4.77,
+      "patent_score": 6.4,
+      "rd_score": 9.0,
+      "policy_score": 0.9,
+      "patent_rows": 9,
+      "rd_rows": 2,
+      "composite_v2": 3.95,
+      "policy_period": "8|9"
+    },
+    "光学光电子": {
+      "existing_score": 0.76,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 0.63,
+      "policy_period": "0|0"
+    },
+    "其他家电Ⅱ": {
+      "existing_score": 5.97,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.8,
+      "policy_period": "0|0"
+    },
+    "其他电子Ⅱ": {
+      "existing_score": 2.81,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.27,
+      "policy_period": "0|0"
+    },
+    "其他电源设备Ⅱ": {
+      "existing_score": 5.08,
+      "patent_score": 1.8,
+      "rd_score": 7.0,
+      "policy_score": 0.0,
+      "patent_rows": 4,
+      "rd_rows": 6,
+      "composite_v2": 4.14,
+      "policy_period": "0|0"
+    },
+    "养殖业": {
+      "existing_score": 3.04,
+      "patent_score": 4.3,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 3,
+      "rd_rows": 0,
+      "composite_v2": 2.5,
+      "policy_period": "0|0"
+    },
+    "军工电子Ⅱ": {
+      "existing_score": 5.27,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.24,
+      "policy_period": "7|8"
+    },
+    "农业综合Ⅱ": {
+      "existing_score": 4.24,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.42,
+      "policy_period": "0|0"
+    },
+    "农产品加工": {
+      "existing_score": 1.66,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.35,
+      "policy_period": "0|0"
+    },
+    "农化制品": {
+      "existing_score": 6.11,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.91,
+      "policy_period": "0|0"
+    },
+    "冶钢原料": {
+      "existing_score": 2.99,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.42,
+      "policy_period": "0|0"
+    },
+    "出版": {
+      "existing_score": 5.18,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.17,
+      "policy_period": "0|0"
+    },
+    "动物保健Ⅱ": {
+      "existing_score": 6.62,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.32,
+      "policy_period": "0|0"
+    },
+    "包装印刷": {
+      "existing_score": 4.46,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.59,
+      "policy_period": "0|0"
+    },
+    "化妆品": {
+      "existing_score": 10,
+      "patent_score": 3.2,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 4,
+      "rd_rows": 0,
+      "composite_v2": 8.06,
+      "policy_period": "0|8"
+    },
+    "化学制品": {
+      "existing_score": 5.7,
+      "patent_score": 7.5,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 6,
+      "rd_rows": 0,
+      "composite_v2": 4.66,
+      "policy_period": "0|0"
+    },
+    "化学制药": {
+      "existing_score": 6.88,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.7,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.53,
+      "policy_period": "7|0"
+    },
+    "化学原料": {
+      "existing_score": 1.47,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.2,
+      "policy_period": "0|0"
+    },
+    "化学纤维": {
+      "existing_score": 6.19,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.98,
+      "policy_period": "0|0"
+    },
+    "医疗器械": {
+      "existing_score": 3.62,
+      "patent_score": 6.1,
+      "rd_score": 3.0,
+      "policy_score": 0.8,
+      "patent_rows": 14,
+      "rd_rows": 13,
+      "composite_v2": 3.0,
+      "policy_period": "7|8"
+    },
+    "医疗服务": {
+      "existing_score": 9.23,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 7.41,
+      "policy_period": "7|8"
+    },
+    "医疗美容": {
+      "existing_score": 8.59,
+      "patent_score": 5.7,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 6,
+      "rd_rows": 0,
+      "composite_v2": 6.95,
+      "policy_period": "0|8"
+    },
+    "医药商业": {
+      "existing_score": 6.73,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.41,
+      "policy_period": "0|0"
+    },
+    "半导体": {
+      "existing_score": 3.16,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.9,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.55,
+      "policy_period": "8|9"
+    },
+    "厨卫电器": {
+      "existing_score": 7.79,
+      "patent_score": 9.3,
+      "rd_score": 1.0,
+      "policy_score": 0.8,
+      "patent_rows": 20,
+      "rd_rows": 6,
+      "composite_v2": 6.36,
+      "policy_period": "0|8"
+    },
+    "商用车": {
+      "existing_score": 0.06,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 0.07,
+      "policy_period": "0|0"
+    },
+    "地面兵装Ⅱ": {
+      "existing_score": 4.4,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.55,
+      "policy_period": "0|0"
+    },
+    "基础建设": {
+      "existing_score": 4.65,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.75,
+      "policy_period": "0|0"
+    },
+    "塑料": {
+      "existing_score": 5.73,
+      "patent_score": 1.1,
+      "rd_score": 2.0,
+      "policy_score": 0.0,
+      "patent_rows": 6,
+      "rd_rows": 5,
+      "composite_v2": 4.63,
+      "policy_period": "0|0"
+    },
+    "多元金融": {
+      "existing_score": 2.89,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.34,
+      "policy_period": "0|0"
+    },
+    "家居用品": {
+      "existing_score": 7.25,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.83,
+      "policy_period": "0|0"
+    },
+    "家电零部件Ⅱ": {
+      "existing_score": 4.14,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.34,
+      "policy_period": "0|0"
+    },
+    "小家电": {
+      "existing_score": 8.9,
+      "patent_score": 9.6,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 2,
+      "rd_rows": 0,
+      "composite_v2": 7.24,
+      "policy_period": "0|0"
+    },
+    "小金属": {
+      "existing_score": 3.2,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.59,
+      "policy_period": "0|0"
+    },
+    "工业金属": {
+      "existing_score": 3.89,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.14,
+      "policy_period": "0|0"
+    },
+    "工程咨询服务Ⅱ": {
+      "existing_score": 3.04,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.46,
+      "policy_period": "0|0"
+    },
+    "工程机械": {
+      "existing_score": 4.52,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.64,
+      "policy_period": "0|0"
+    },
+    "广告营销": {
+      "existing_score": 2.05,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.66,
+      "policy_period": "0|0"
+    },
+    "影视院线": {
+      "existing_score": 3.29,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.66,
+      "policy_period": "0|0"
+    },
+    "房地产开发": {
+      "existing_score": 1.46,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.19,
+      "policy_period": "0|0"
+    },
+    "房地产服务": {
+      "existing_score": 3.21,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.59,
+      "policy_period": "0|0"
+    },
+    "房屋建设Ⅱ": {
+      "existing_score": 4.07,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.28,
+      "policy_period": "0|0"
+    },
+    "摩托车及其他": {
+      "existing_score": 5.3,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.27,
+      "policy_period": "0|0"
+    },
+    "教育": {
+      "existing_score": 2.63,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.13,
+      "policy_period": "0|0"
+    },
+    "数字媒体": {
+      "existing_score": 6.79,
+      "patent_score": 1.4,
+      "rd_score": 8.0,
+      "policy_score": 0.0,
+      "patent_rows": 4,
+      "rd_rows": 1,
+      "composite_v2": 5.51,
+      "policy_period": "0|0"
+    },
+    "文娱用品": {
+      "existing_score": 2.44,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.98,
+      "policy_period": "0|0"
+    },
+    "旅游及景区": {
+      "existing_score": 4.75,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.83,
+      "policy_period": "0|0"
+    },
+    "旅游零售Ⅱ": {
+      "existing_score": 3.37,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.72,
+      "policy_period": "0|0"
+    },
+    "普钢": {
+      "existing_score": 1.29,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.06,
+      "policy_period": "0|0"
+    },
+    "服装家纺": {
+      "existing_score": 4.22,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.4,
+      "policy_period": "0|0"
+    },
+    "未知": {
+      "existing_score": 10,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 8.03,
+      "policy_period": "0|0"
+    },
+    "林业Ⅱ": {
+      "existing_score": 1.43,
+      "patent_score": 2.9,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 8,
+      "rd_rows": 0,
+      "composite_v2": 1.2,
+      "policy_period": "0|0"
+    },
+    "橡胶": {
+      "existing_score": 4.43,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.57,
+      "policy_period": "0|0"
+    },
+    "水泥": {
+      "existing_score": 3.39,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.74,
+      "policy_period": "0|0"
+    },
+    "汽车服务": {
+      "existing_score": 3.35,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.71,
+      "policy_period": "0|0"
+    },
+    "汽车零部件": {
+      "existing_score": 3.56,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.87,
+      "policy_period": "0|0"
+    },
+    "油服工程": {
+      "existing_score": 1.29,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.06,
+      "policy_period": "0|0"
+    },
+    "油气开采Ⅱ": {
+      "existing_score": 2.68,
+      "patent_score": 8.6,
+      "rd_score": 5.0,
+      "policy_score": 0.0,
+      "patent_rows": 5,
+      "rd_rows": 1,
+      "composite_v2": 2.28,
+      "policy_period": "0|0"
+    },
+    "消费电子": {
+      "existing_score": 4.08,
+      "patent_score": 2.1,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 8,
+      "rd_rows": 0,
+      "composite_v2": 3.31,
+      "policy_period": "0|8"
+    },
+    "渔业": {
+      "existing_score": 1.88,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.53,
+      "policy_period": "0|0"
+    },
+    "游戏Ⅱ": {
+      "existing_score": 5.96,
+      "patent_score": 8.2,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 10,
+      "rd_rows": 0,
+      "composite_v2": 4.88,
+      "policy_period": "0|0"
+    },
+    "炼化及贸易": {
+      "existing_score": 1.1,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 0.91,
+      "policy_period": "0|0"
+    },
+    "焦炭Ⅱ": {
+      "existing_score": -0.04,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": -0.01,
+      "policy_period": "0|0"
+    },
+    "煤炭开采": {
+      "existing_score": 3.43,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.77,
+      "policy_period": "0|0"
+    },
+    "照明设备Ⅱ": {
+      "existing_score": 2.88,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.33,
+      "policy_period": "0|0"
+    },
+    "燃气Ⅱ": {
+      "existing_score": 6.78,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.45,
+      "policy_period": "0|0"
+    },
+    "物流": {
+      "existing_score": 4.19,
+      "patent_score": 5.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 1,
+      "rd_rows": 0,
+      "composite_v2": 3.43,
+      "policy_period": "0|0"
+    },
+    "特钢Ⅱ": {
+      "existing_score": 2.13,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.73,
+      "policy_period": "0|0"
+    },
+    "环保设备Ⅱ": {
+      "existing_score": 6.44,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.7,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.18,
+      "policy_period": "7|0"
+    },
+    "环境治理": {
+      "existing_score": 4.38,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.53,
+      "policy_period": "0|0"
+    },
+    "玻璃玻纤": {
+      "existing_score": 3.4,
+      "patent_score": 4.6,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 4,
+      "rd_rows": 0,
+      "composite_v2": 2.79,
+      "policy_period": "0|0"
+    },
+    "生物制品": {
+      "existing_score": 9.41,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 7.55,
+      "policy_period": "7|8"
+    },
+    "电力": {
+      "existing_score": 1.09,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 0.9,
+      "policy_period": "0|0"
+    },
+    "电子化学品Ⅱ": {
+      "existing_score": 8.43,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.7,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 6.77,
+      "policy_period": "7|0"
+    },
+    "电机Ⅱ": {
+      "existing_score": 5.81,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.67,
+      "policy_period": "0|0"
+    },
+    "电池": {
+      "existing_score": 5.27,
+      "patent_score": 7.9,
+      "rd_score": 4.0,
+      "policy_score": 0.9,
+      "patent_rows": 11,
+      "rd_rows": 7,
+      "composite_v2": 4.34,
+      "policy_period": "8|9"
+    },
+    "电网设备": {
+      "existing_score": 7.27,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.84,
+      "policy_period": "0|0"
+    },
+    "电视广播Ⅱ": {
+      "existing_score": 3.72,
+      "patent_score": 6.8,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 3,
+      "rd_rows": 0,
+      "composite_v2": 3.07,
+      "policy_period": "0|0"
+    },
+    "白色家电": {
+      "existing_score": 3.74,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.02,
+      "policy_period": "0|0"
+    },
+    "白酒Ⅱ": {
+      "existing_score": 8.99,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 2,
+      "rd_rows": 0,
+      "composite_v2": 7.22,
+      "policy_period": "0|8"
+    },
+    "种植业": {
+      "existing_score": 4.14,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.34,
+      "policy_period": "0|0"
+    },
+    "纺织制造": {
+      "existing_score": 5.37,
+      "patent_score": 5.4,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 7,
+      "rd_rows": 0,
+      "composite_v2": 4.38,
+      "policy_period": "0|0"
+    },
+    "综合Ⅱ": {
+      "existing_score": 2.79,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.26,
+      "policy_period": "0|0"
+    },
+    "能源金属": {
+      "existing_score": 5.89,
+      "patent_score": 2.5,
+      "rd_score": 6.0,
+      "policy_score": 0.9,
+      "patent_rows": 30,
+      "rd_rows": 4,
+      "composite_v2": 4.79,
+      "policy_period": "7|9"
+    },
+    "自动化设备": {
+      "existing_score": 3.87,
+      "patent_score": 8.9,
+      "rd_score": 0.0,
+      "policy_score": 0.7,
+      "patent_rows": 5,
+      "rd_rows": 1,
+      "composite_v2": 3.21,
+      "policy_period": "7|0"
+    },
+    "航天装备Ⅱ": {
+      "existing_score": 3.11,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.51,
+      "policy_period": "7|8"
+    },
+    "航海装备Ⅱ": {
+      "existing_score": 1.23,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.01,
+      "policy_period": "0|0"
+    },
+    "航空机场": {
+      "existing_score": 3.49,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.82,
+      "policy_period": "0|0"
+    },
+    "航空装备Ⅱ": {
+      "existing_score": 3.49,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.82,
+      "policy_period": "7|8"
+    },
+    "航运港口": {
+      "existing_score": 4.8,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.86,
+      "policy_period": "0|0"
+    },
+    "装修建材": {
+      "existing_score": 1.65,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.34,
+      "policy_period": "0|0"
+    },
+    "装修装饰Ⅱ": {
+      "existing_score": 1.76,
+      "patent_score": 0.7,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 5,
+      "rd_rows": 0,
+      "composite_v2": 1.44,
+      "policy_period": "0|0"
+    },
+    "计算机设备": {
+      "existing_score": 4.06,
+      "patent_score": 7.1,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 7,
+      "rd_rows": 0,
+      "composite_v2": 3.34,
+      "policy_period": "0|8"
+    },
+    "调味发酵品Ⅱ": {
+      "existing_score": 9.98,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.8,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 8.01,
+      "policy_period": "0|8"
+    },
+    "贵金属": {
+      "existing_score": 3.57,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.88,
+      "policy_period": "0|0"
+    },
+    "贸易Ⅱ": {
+      "existing_score": 1.21,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 0.99,
+      "policy_period": "0|0"
+    },
+    "轨交设备Ⅱ": {
+      "existing_score": 4.58,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.69,
+      "policy_period": "0|0"
+    },
+    "软件开发": {
+      "existing_score": 4.85,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.9,
+      "policy_period": "0|0"
+    },
+    "通信服务": {
+      "existing_score": 6.86,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 5.51,
+      "policy_period": "0|0"
+    },
+    "通信设备": {
+      "existing_score": 3.84,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.1,
+      "policy_period": "0|0"
+    },
+    "通用设备": {
+      "existing_score": 2.29,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.86,
+      "policy_period": "0|0"
+    },
+    "造纸": {
+      "existing_score": 4.53,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.65,
+      "policy_period": "0|0"
+    },
+    "酒店餐饮": {
+      "existing_score": 2.13,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.73,
+      "policy_period": "0|0"
+    },
+    "金属新材料": {
+      "existing_score": 5.1,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.11,
+      "policy_period": "0|0"
+    },
+    "铁路公路": {
+      "existing_score": 4.72,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.8,
+      "policy_period": "0|0"
+    },
+    "非白酒": {
+      "existing_score": 4.25,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.43,
+      "policy_period": "0|0"
+    },
+    "非金属材料Ⅱ": {
+      "existing_score": 4.82,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.88,
+      "policy_period": "0|0"
+    },
+    "风电设备": {
+      "existing_score": 1.95,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 1.58,
+      "policy_period": "0|0"
+    },
+    "食品加工": {
+      "existing_score": 3.41,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.75,
+      "policy_period": "0|0"
+    },
+    "饮料乳品": {
+      "existing_score": 2.87,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 2.32,
+      "policy_period": "0|0"
+    },
+    "饰品": {
+      "existing_score": 3.83,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 3.09,
+      "policy_period": "0|0"
+    },
+    "饲料": {
+      "existing_score": 9.14,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 7.34,
+      "policy_period": "0|0"
+    },
+    "黑色家电": {
+      "existing_score": 5.9,
+      "patent_score": 0.0,
+      "rd_score": 0.0,
+      "policy_score": 0.0,
+      "patent_rows": 0,
+      "rd_rows": 0,
+      "composite_v2": 4.75,
+      "policy_period": "0|0"
+    }
+  },
+  "rd_integration": {
+    "patent_data_sources": "Extracted from 396 annual report PDFs via pdftotext",
+    "rd_data_sources": "Same source, partial coverage (20% of company-years)",
+    "policy_data_sources": "Policy crawler ready. Run fetch_policy_data.py to populate.",
+    "new_dimensions": [
+      {
+        "name": "patent_intensity",
+        "weight": 0.1,
+        "description": "Industry median patent count (78% coverage)"
+      },
+      {
+        "name": "rd_intensity",
+        "weight": 0.05,
+        "description": "Industry median R&D spending (20% coverage)"
+      },
+      {
+        "name": "policy_score",
+        "weight": 0.05,
+        "description": "Policy support intensity (placeholder - run crawler)"
+      }
+    ],
+    "scoring_formula": "Existing(80%) + Patent(10%) + R&D(5%) + Policy(5%)"
+  },
+  "data_sources_rd": "/Users/bessie/codex/Long_Toll_Road /回测/industry_pit/complete-system-v1/data/rd_capex_data.csv",
+  "data_sources_policy": "fetch_policy_data.py (run to populate)",
+  "policy_reference": "build_policy_reference.py (based on 十三五/十四五 plans)"
+}

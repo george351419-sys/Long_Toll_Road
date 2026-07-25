@@ -1,0 +1,75 @@
+{
+  "version": "complete-alpha-v1",
+  "frozen_before_return_test": true,
+  "economic_archetype": ["value_quality", "industry_structural_growth"],
+  "evidence_policy": {
+    "decision_rule": "available_after<=decision_at and status=verified",
+    "missing": "ineligible_not_zero",
+    "qualitative_minimum": "two independent source classes, including at least one government/association/customer primary source",
+    "company_self_description_alone": "insufficient"
+  },
+  "track": {
+    "gate": "all_required",
+    "required": {
+      "demand_irreversibility": {
+        "definition": "政府或行业协会原始序列显示连续两个已披露年度需求未收缩超过10%，且存在不可由单一公司行为解释的法规、人口、技术或成本驱动",
+        "sources": ["government_or_association_series", "independent_primary_document"]
+      },
+      "penetration_rate": {
+        "definition": "当时发布的分子、分母和统计口径齐全；<=30%通过，30%-50%仅观察，>50%不因渗透率获得Alpha分",
+        "maximum_age_days": 365
+      },
+      "tam_vintage": {
+        "definition": "TAM当前值和5年预测来自同一历史版本，记录发布日期、币种、口径与预测者；五年预测不得由后来数据反推",
+        "minimum_tam_5y_cny_100m": 100
+      },
+      "policy_or_standard": {
+        "definition": "已生效或正式发布的政策、强制标准、采购规则；征求意见稿只能作为观察项"
+      }
+    },
+    "pass": "demand_irreversibility and penetration_rate<=30 and tam_5y>=100亿元 and policy_or_standard verified"
+  },
+  "toll_segment": {
+    "required": {
+      "effective_supplier_count": {"pass": "<=5", "strong": "<=3"},
+      "certification_months": {"pass": ">=12", "strong": ">=18"},
+      "capacity_lead_months": {"pass": ">=12", "strong": ">=24"},
+      "commercial_exclusivity": {
+        "definition": "专利或专有工艺必须同时存在量产、客户采用和难以低成本绕开的证据；只有专利数量不通过"
+      },
+      "contract_or_prepayment": {
+        "definition": "至少存在长协>=3年、客户预付款或不可撤销采购承诺之一；框架协议无数量/金额只记观察"
+      },
+      "gross_margin_5y": {"pass": ">=20%", "strong": ">=35%"}
+    },
+    "pass": "supplier_count<=5 and certification>=12m and capacity_lead>=12m and commercial_exclusivity verified and contract_or_prepayment verified and gross_margin_5y>=20%"
+  },
+  "company_moat": {
+    "required": {
+      "top1_customer_share": {"pass": "<=50%", "preferred": "<30%"},
+      "ocf_to_profit_ttm": {"pass": ">=0.8"},
+      "rd_ratio": {"pass": ">=3%", "preferred": ">=5%"},
+      "gross_margin_5y": {"pass": ">=20%"},
+      "contract_liability_vs_revenue": {"warning": "合同负债增速低于营收增速20个百分点以上"},
+      "strategic_focus": {"definition": "最近三年重大投资中与主业无关金额占净资产<10%，且无追热点式主业切换"},
+      "capital_allocation": {"definition": "重大并购/扩产必须有董事会公告、资金来源和投产/整合里程碑"}
+    },
+    "hard_vetoes": [
+      "confirmed_financial_fraud",
+      "adverse_or_disclaimer_audit",
+      "two_consecutive_nonstandard_audits",
+      "core_business_ceased"
+    ],
+    "pass": "all numeric required pass, strategic_focus verified, no hard veto"
+  },
+  "valuation_margin": {
+    "data_requirement": "未复权可交易价或可逆复权因子、PIT EPS/BPS、PIT行业分类、至少5年历史估值；任一缺失即不可估值",
+    "normalized_eps": "min(latest_positive_ttm_eps, trailing_3y_positive_eps_median)",
+    "fair_multiple": "min(15, own_5y_pe_median, PIT_industry_pe_median)",
+    "fair_value": "normalized_eps*fair_multiple",
+    "entry": "pe_percentile_5y<=20% and price<=0.8*fair_value and pb>0",
+    "no_negative_earnings_proxy": true,
+    "maximum_age_days": 90
+  },
+  "final_entry": "track pass and toll_segment pass and company_moat pass and valuation_margin entry"
+}

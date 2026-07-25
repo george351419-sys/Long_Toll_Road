@@ -1,0 +1,39 @@
+{
+  "frozen_at": "2026-07-24T16:20:00+08:00",
+  "purpose": "classify CNINFO keyword hits before any PDF content is inspected",
+  "hard_veto_candidate_keywords": [
+    "立案",
+    "行政处罚",
+    "非标准审计意见",
+    "退市"
+  ],
+  "alpha_candidate_keywords": [
+    "重大合同",
+    "中标",
+    "客户认证",
+    "合格供应商",
+    "扩产",
+    "投产"
+  ],
+  "st_title_include_regex": "风险警示|特别处理|暂停上市|终止上市|退市整理|恢复上市|摘帽",
+  "st_direction": {
+    "reversal_regex": "撤销|申请撤销|恢复上市|摘帽",
+    "onset_regex": "实施|实行|继续实行|暂停上市|终止上市|退市整理"
+  },
+  "title_flags": {
+    "cancelled_regex": "已取消|取消公告",
+    "revision_regex": "更新|更正|补充|修订"
+  },
+  "promotion_rules": [
+    "keyword or title match is candidate-only",
+    "company, subsidiary, shareholder, director and controller subjects must be distinguished from PDF text",
+    "an investigation is not fraud unless the original document identifies the company and the frozen hard-veto condition",
+    "an administrative penalty is not automatically a hard veto until subject, cause and effective date are extracted",
+    "a non-standard audit candidate must extract opinion type and covered reporting period",
+    "ST onset and reversal are separate events",
+    "alpha evidence must extract amount, counterparty, term, cancellation and actual execution status",
+    "cancelled announcements cannot be positive evidence",
+    "no candidate is written as verified without original PDF hash, page locator and reviewer status"
+  ],
+  "storage_policy": "download one PDF to temporary storage, hash and extract text, then delete PDF immediately"
+}

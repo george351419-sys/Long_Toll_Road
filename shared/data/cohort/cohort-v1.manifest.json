@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-07-24T11:59:07.229554+08:00",
+  "cohort_size": 500,
+  "failure_or_delist": 100,
+  "deterministic_control": 400,
+  "industries": 129,
+  "selection_salt": "industry-pit-cohort-v1",
+  "cohort_sha256": "7e40c41af5b3cf613f55136d0e2befc4e75b06fcd1c48c30da4d4164fc008be1",
+  "rule": "100 deterministic failure/delist strata + 400 industry-round-robin deterministic controls; selected before archive reading",
+  "warning": "failure labels are audit strata only and must never enter historical selection signals"
+}
