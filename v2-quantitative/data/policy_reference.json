@@ -87,7 +87,12 @@
     "score_2016_2020": 8,
     "score_2021_2025": 9,
     "max_score": 9,
-    "avg_score": 8.5
+    "avg_score": 8.5,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五可再生能源发展规划"
+    ],
+    "final_score": 9.5
   },
   "光学光电子": {
     "score_2016_2020": 0,
@@ -201,7 +206,12 @@
     "score_2016_2020": 7,
     "score_2021_2025": 8,
     "max_score": 8,
-    "avg_score": 7.5
+    "avg_score": 7.5,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五医药工业发展规划"
+    ],
+    "final_score": 8.5
   },
   "医疗服务": {
     "score_2016_2020": 7,
@@ -225,7 +235,15 @@
     "score_2016_2020": 8,
     "score_2021_2025": 9,
     "max_score": 9,
-    "avg_score": 8.5
+    "avg_score": 8.5,
+    "policy_documents": 4,
+    "policy_details": [
+      "国家集成电路产业发展推进纲要",
+      "国家集成电路产业投资基金二期",
+      "国家集成电路产业投资基金三期",
+      "十四五规划—科技自立自强"
+    ],
+    "final_score": 10
   },
   "厨卫电器": {
     "score_2016_2020": 0,
@@ -537,7 +555,12 @@
     "score_2016_2020": 8,
     "score_2021_2025": 9,
     "max_score": 9,
-    "avg_score": 8.5
+    "avg_score": 8.5,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五能源领域科技创新规划"
+    ],
+    "final_score": 9.5
   },
   "电网设备": {
     "score_2016_2020": 0,
@@ -772,5 +795,70 @@
     "score_2021_2025": 0,
     "max_score": 0,
     "avg_score": 0.0
+  },
+  "新能源": {
+    "max_score": 4,
+    "policy_documents": 2,
+    "policy_details": [
+      "十四五规划—新能源革命",
+      "2030年前碳达峰行动方案"
+    ],
+    "final_score": 4
+  },
+  "储能": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五新型储能发展实施方案"
+    ],
+    "final_score": 2
+  },
+  "新能源汽车": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "新能源汽车产业发展规划(2021-2035)"
+    ],
+    "final_score": 2
+  },
+  "创新药": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五生物经济发展规划"
+    ],
+    "final_score": 2
+  },
+  "人工智能": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "新一代人工智能发展规划"
+    ],
+    "final_score": 2
+  },
+  "数字经济": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五数字经济发展规划"
+    ],
+    "final_score": 2
+  },
+  "国防军工": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "十四五规划—国防现代化"
+    ],
+    "final_score": 2
+  },
+  "航天": {
+    "max_score": 2,
+    "policy_documents": 1,
+    "policy_details": [
+      "航天强国建设路线图"
+    ],
+    "final_score": 2
   }
 }
